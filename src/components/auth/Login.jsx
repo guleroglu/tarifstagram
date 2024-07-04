@@ -16,7 +16,7 @@ export default function Login({ navigation }) {
     <View className="flex-1 bg-white px-6">
       <View className="items-center mt-[60px]">
         <Image
-          source={require("../../../assets/auth-logo2.png")}
+          source={require("../../../assets/auth-logo.png")}
           className="w-[250px] h-[170px]"
         />
       </View>
