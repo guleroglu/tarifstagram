@@ -4,8 +4,17 @@ import Input from "../shared/Input";
 import Button from "../shared/Button";
 import { loginForm } from "../../utils/const/authForm";
 import { inputReducer } from "../../reducer/inputReducer";
+import { setLoader } from "../../redux/generalSlice";
+import { useDispatch } from "react-redux";
 
 export default function Login({ navigation }) {
+  const reduxDispatch = useDispatch();
+
+  const changePage = () => {
+    reduxDispatch(setLoader());
+    navigation.navigate("Register");
+  };
+
   const initialState = {
     email: "",
     password: "",
@@ -38,8 +47,8 @@ export default function Login({ navigation }) {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className="mt-6">
-          <Button title="Giriş Yap" type="login" />
+        <TouchableOpacity onPress={changePage} className="mt-6">
+          <Button title={"Giriş Yap"} type="login" />
         </TouchableOpacity>
 
         <View className="flex-row mt-6 gap-x-1">
