@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 export default function NavigationStack() {
   const { loader } = useSelector((state) => state.general);
-  const isLogin = false;
+  const isLogin = true;
   return (
     <>
       {isLogin ? <UserStack /> : <AuthStack />}
