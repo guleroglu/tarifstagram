@@ -1,17 +1,16 @@
 import { Modal, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
-export default function Header() {
-
+export default function Header({ navigation }) {
   return (
-    <View className="bg-white flex-row justify-between items-center p-[10px]">
+    <View className="flex-row justify-between items-center p-[10px]">
       <View>
         <Text className="text-[20px] text-primary tracking-widest">
           tarfistagram
         </Text>
       </View>
       <View className="flex-row items-center gap-2">
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("AddRecipe")}>
           <AntDesign name="pluscircleo" size={20} color="#00012C" />
         </TouchableOpacity>
         <TouchableOpacity>
@@ -23,8 +22,6 @@ export default function Header() {
           </View>
         </TouchableOpacity>
       </View>
-
-      
     </View>
   );
 }
