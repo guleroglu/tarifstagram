@@ -9,6 +9,7 @@ module.exports = {
         tertiary: "#121212",
         main: "#385BDB",
         border: "#cfcfcf",
+        card: "#E6E6FA",
       },
     },
   },
