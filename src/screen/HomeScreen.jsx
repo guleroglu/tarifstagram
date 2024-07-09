@@ -1,8 +1,10 @@
-import { ScrollView, Text, View } from "react-native";
+import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/home/Header";
 import RecipeList from "../components/home/RecipeList";
+import Notification from "../components/home/Notification";
+import Modal from "../components/shared/Modal";
 
 export default function HomeScreen({ navigation }) {
   return (
