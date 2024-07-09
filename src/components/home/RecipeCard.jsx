@@ -26,8 +26,8 @@ export default function RecipeCard() {
         </TouchableOpacity>
       </View>
       <View className="mb-6">
-        <View className="mb-4">
-          <Text className="text-[30px] font-semibold">Tokat Kebabı</Text>
+        <View className="mb-4 gap-4">
+          <Text className="text-[24px] font-semibold">Tokat Kebabı</Text>
           <Text className="text-[13px]">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
             vitae accusantium deleniti quae possimus atque hic ullam praesentium
