@@ -3,8 +3,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useState } from "react";
 import Header from "../components/home/Header";
 import RecipeList from "../components/home/RecipeList";
-import Notification from "../components/home/Notification";
-import Modal from "../components/shared/Modal";
 
 export default function HomeScreen({ navigation }) {
   return (
