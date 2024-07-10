@@ -1,14 +1,10 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {
-  HomeScreen,
-  AddRecipeScreen,
-  ProfileScreen,
-  FavoriteRecipes,
-} from "../screen";
+import { HomeScreen, ProfileScreen, FavoriteRecipes } from "../screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 import { Text } from "react-native";
+import AddRecipeStack from "./AddRecipeStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -59,7 +55,7 @@ export default function UserStack() {
         />
         <Tab.Screen
           name="AddRecipe"
-          component={AddRecipeScreen}
+          component={AddRecipeStack}
           options={{
             tabBarLabel: ({ focused }) =>
               focused ? (
