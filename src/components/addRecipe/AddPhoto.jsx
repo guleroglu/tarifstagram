@@ -10,15 +10,17 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import Button from "../shared/Button";
 import * as ImagePicker from "expo-image-picker";
+import AddPhotoErrorModal from "./AddPhotoErrorModal";
 
 export default function AddPhoto({ navigation }) {
   const [image, setImage] = useState(null);
+  const [showErrorModal, setShowErrorModal] = useState(false);
 
   const pickImage = async () => {
     const permissionResult =
       await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (permissionResult.granted === false) {
-      alert("Kamera rulosuna erişim izni gereklidir!");
+      setShowErrorModal(true);
       return;
     }
 
@@ -90,6 +92,10 @@ export default function AddPhoto({ navigation }) {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      <AddPhotoErrorModal
+        visible={showErrorModal}
+        onClose={() => setShowErrorModal(false)}
+      />
     </SafeAreaView>
   );
 }
