@@ -10,7 +10,11 @@ export default function AddRecipeStack() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="AddPhoto" component={AddPhotoScreen} />
-      <Stack.Screen name="AddDetails" component={AddDetailsScreen} />
+      <Stack.Screen
+        name="AddDetails"
+        component={AddDetailsScreen}
+        options={{ headerShown: true, headerTitle: "Tarif Bilgileri" }}
+      />
       <Stack.Screen name="AddSteps" component={AddStepsScreen} />
     </Stack.Navigator>
   );
