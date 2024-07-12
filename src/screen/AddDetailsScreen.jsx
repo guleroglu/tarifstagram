@@ -1,10 +1,6 @@
-import {  Text, View } from 'react-native'
-import React from 'react'
+import React from "react";
+import AddDetails from "../components/addRecipe/AddDetails";
 
 export default function AddDetailsScreen() {
-  return (
-    <View>
-      <Text>AddDetailsScreen</Text>
-    </View>
-  )
+  return <AddDetails />;
 }
