@@ -43,7 +43,7 @@ export default function AddPhoto({ navigation }) {
   return (
     <SafeAreaView className="bg-white flex-1">
       <ScrollView contentContainerStyle={{ flexGrow: 1, padding: 24 }}>
-        <View className="mt-4">
+        <View className="mt-">
           <View className="flex-row gap-3 items-center mb-4">
             <Text className="text-[24px] text-primary">Fotoğraf Ekle</Text>
             <AntDesign name="questioncircle" size={20} color="#00012C" />
@@ -85,8 +85,11 @@ export default function AddPhoto({ navigation }) {
           </TouchableOpacity>
 
           <TouchableOpacity
-            className="mt-4"
-            onPress={() => navigation.navigate("AddDetails")}
+            className={`mt-4 ${image ? "opacity-100" : "opacity-50"}`}
+            onPress={() => {
+              if (image) navigation.navigate("AddDetails");
+            }}
+            disabled={!image}
           >
             <Button title={"Devam"} type={"login"} />
           </TouchableOpacity>
