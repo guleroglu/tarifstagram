@@ -6,6 +6,8 @@ import AddDetailsInput from "./AddDetailsInput";
 export default function AddDetails() {
   const [recipeName, setRecipeName] = useState("");
   const [recipeSummary, setRecipeSummary] = useState("");
+  const [ingredients, setIngredients] = useState("");
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView contentContainerStyle={{ padding: 20 }}>
@@ -25,6 +27,18 @@ export default function AddDetails() {
           multiline
           textAlignVertical="top"
         />
+
+        <AddDetailsInput
+          label="Malzeme Detayları*"
+          placeholder={"Malzemeleri giriniz. \n-\n-\n-\n-\n-\n-"}
+          value={ingredients}
+          onChangeText={setIngredients}
+          multiline
+          textAlignVertical="top"
+        />
+
+
+      
       </ScrollView>
     </SafeAreaView>
   );
