@@ -15,7 +15,7 @@ export default function AddDetailsInput({
       <Text className="text-primary mb-[5px] text-[14px] font-semibold">{label}</Text>
       <TextInput
         className="border-[1px] border-border rounded-[5px] p-[10px] text-[14px]"
-        style={multiline && { height: 100 }}
+        style={multiline && { height: 150 }}
         placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
