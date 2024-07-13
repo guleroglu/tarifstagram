@@ -1,4 +1,4 @@
-import { ScrollView, Text, TextInput, View } from "react-native";
+import { ScrollView } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AddDetailsInput from "./AddDetailsInput";
@@ -36,9 +36,6 @@ export default function AddDetails() {
           multiline
           textAlignVertical="top"
         />
-
-
-      
       </ScrollView>
     </SafeAreaView>
   );

@@ -87,9 +87,8 @@ export default function AddPhoto({ navigation }) {
           <TouchableOpacity
             className={`mt-4 ${image ? "opacity-100" : "opacity-50"}`}
             onPress={() => {
-              if (image) navigation.navigate("AddDetails");
+              navigation.navigate("AddDetails");
             }}
-            disabled={!image}
           >
             <Button title={"Devam"} type={"login"} />
           </TouchableOpacity>
