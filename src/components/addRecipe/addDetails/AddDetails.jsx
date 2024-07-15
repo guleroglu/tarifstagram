@@ -37,10 +37,7 @@ export default function AddDetails() {
           textAlignVertical="top"
         />
 
-        {/* <View className="flex-row">
-          <AddRecipeDropDown />
-          <AddRecipeDropDown />
-        </View> */}
+      
       </ScrollView>
     </SafeAreaView>
   );
