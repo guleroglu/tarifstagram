@@ -12,7 +12,9 @@ export default function AddDetailsInput({
 }) {
   return (
     <View className="mb-6">
-      <Text className="text-primary mb-[5px] text-[14px] font-semibold">{label}</Text>
+      <Text className="text-primary mb-[5px] text-[14px] font-semibold">
+        {label}
+      </Text>
       <TextInput
         className="border-[1px] border-border rounded-[5px] p-[10px] text-[14px]"
         style={multiline && { height: 150 }}

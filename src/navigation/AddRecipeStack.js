@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { AddDetailsScreen, AddPhotoScreen, AddStepsScreen } from "../screen";
+import { AddDetailsScreen, AddPhotoScreen, AddResultScreen } from "../screen";
 
 export default function AddRecipeStack() {
   const Stack = createNativeStackNavigator();
@@ -15,7 +15,11 @@ export default function AddRecipeStack() {
         component={AddDetailsScreen}
         options={{ headerShown: true, headerTitle: "Tarif Bilgileri" }}
       />
-      <Stack.Screen name="AddSteps" component={AddStepsScreen} />
+      <Stack.Screen
+        name="AddResult"
+        component={AddResultScreen}
+        options={{ headerShown: true, headerTitle: "Tarif" }}
+      />
     </Stack.Navigator>
   );
 }

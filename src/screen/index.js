@@ -6,7 +6,7 @@ import FavoriteRecipes from "./FavoriteRecipes";
 import ProfileScreen from "./ProfileScreen";
 import AddDetailsScreen from "./AddDetailsScreen";
 import AddPhotoScreen from "./AddPhotoScreen";
-import AddStepsScreen from "./AddStepsScreen";
+import AddResultScreen from "./AddResultScreen";
 
 export {
   SplashScreen,
@@ -17,5 +17,5 @@ export {
   ProfileScreen,
   AddDetailsScreen,
   AddPhotoScreen,
-  AddStepsScreen,
+  AddResultScreen,
 };
