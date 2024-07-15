@@ -1,9 +1,11 @@
-import { ScrollView, View } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AddDetailsInput from "./AddDetailsInput";
+import AddDetailsDropDownModal from "./AddDetailsDropDownModal";
+import Button from "../../shared/Button";
 
-export default function AddDetails() {
+export default function AddDetails({ navigation }) {
   const [recipeName, setRecipeName] = useState("");
   const [recipeSummary, setRecipeSummary] = useState("");
   const [ingredients, setIngredients] = useState("");
@@ -37,7 +39,14 @@ export default function AddDetails() {
           textAlignVertical="top"
         />
 
-      
+        <AddDetailsDropDownModal label="Hazırlık Süresi*" />
+
+        <TouchableOpacity
+          className="mt-5"
+          onPress={() => navigation.navigate("AddResult")}
+        >
+          <Button title="Devam" type="login" />
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
