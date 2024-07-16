@@ -18,7 +18,7 @@ export default function AddDetails({ navigation }) {
           placeholder="Tarif adı giriniz."
           value={recipeName}
           onChangeText={setRecipeName}
-          maxLength={55}
+          maxLength={50}
         />
         <AddDetailsInput
           label="Tarif Özeti*"
@@ -35,6 +35,7 @@ export default function AddDetails({ navigation }) {
           placeholder={"Malzemeleri giriniz. \n-\n-\n-\n-\n-\n-"}
           value={ingredients}
           onChangeText={setIngredients}
+          maxLength={150}
           multiline
           textAlignVertical="top"
         />

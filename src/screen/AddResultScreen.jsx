@@ -1,10 +1,8 @@
 import { Text, View } from "react-native";
 import React from "react";
+import AddResult from "../components/addRecipe/addResult/AddResult";
+;
 
 export default function AddResultScreen() {
-  return (
-    <View>
-      <Text>AddResultScreen</Text>
-    </View>
-  );
+  return <AddResult />;
 }
