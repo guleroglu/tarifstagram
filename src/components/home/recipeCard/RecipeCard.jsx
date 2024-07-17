@@ -6,7 +6,7 @@ import RecipeCardFooter from "./RecipeCardFooter";
 
 export default function RecipeCard() {
   return (
-    <View className="bg-white rounded-md w-full p-[10px] mb-4">
+    <View className="bg-white rounded-md w-full p-[10px] mb-6 ">
       <RecipeCardHeader />
       <RecipeCardContent />
       <RecipeCardFooter />
