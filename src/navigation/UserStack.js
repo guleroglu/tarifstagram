@@ -11,7 +11,25 @@ const Tab = createBottomTabNavigator();
 export default function UserStack() {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: {
+            position: "absolute",
+            width: "90%",
+            height: 60,
+            bottom: 20,
+            right: 16,
+            left: "5%",
+            borderRadius: 12,
+            backgroundColor: "white",
+          },
+          tabBarItemStyle: {
+            marginBottom: 7,
+          },
+        }}
+        safeAreaInsets={{ bottom: 0 }}
+      >
         <Tab.Screen
           name="Home"
           component={HomeScreen}
@@ -26,9 +44,9 @@ export default function UserStack() {
               ),
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <AntDesign name="home" size={20} color="#00012C" />
+                <AntDesign name="home" size={22} color="#00012C" />
               ) : (
-                <AntDesign name="home" size={20} color="#868E96" />
+                <AntDesign name="home" size={22} color="#868E96" />
               ),
           }}
         />
@@ -47,9 +65,9 @@ export default function UserStack() {
               ),
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <AntDesign name="hearto" size={20} color="#00012C" />
+                <AntDesign name="hearto" size={22} color="#00012C" />
               ) : (
-                <AntDesign name="hearto" size={20} color="#868E96" />
+                <AntDesign name="hearto" size={22} color="#868E96" />
               ),
           }}
         />
@@ -67,9 +85,9 @@ export default function UserStack() {
               ),
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <AntDesign name="plus" size={20} color="#00012C" />
+                <AntDesign name="plus" size={22} color="#00012C" />
               ) : (
-                <AntDesign name="plus" size={20} color="#868E96" />
+                <AntDesign name="plus" size={22} color="#868E96" />
               ),
           }}
         />
@@ -87,9 +105,9 @@ export default function UserStack() {
               ),
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <AntDesign name="user" size={20} color="#00012C" />
+                <AntDesign name="user" size={22} color="#00012C" />
               ) : (
-                <AntDesign name="user" size={20} color="#868E96" />
+                <AntDesign name="user" size={22} color="#868E96" />
               ),
           }}
         />
