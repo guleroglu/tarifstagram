@@ -7,12 +7,12 @@ import { MaterialIcons, Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Button from "../../shared/Button";
 
-export default function addResult() {
+export default function addResult({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
         <View className="p-3 bg-white">
-          <View className="mb-4">
+          <View className="mt-2 mb-4">
             <RecipeCardUserInfo />
           </View>
           <RecipeCardContent />
@@ -54,11 +54,11 @@ export default function addResult() {
             <Text>*</Text>
           </View>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
             <Button title="Yayınla" type="login" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("AddDetails")}>
             <Button title="Düzenlemeye Geri Dön" type="register" />
           </TouchableOpacity>
         </View>

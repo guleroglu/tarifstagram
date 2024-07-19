@@ -1,9 +1,12 @@
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-export default function RecipeCardContent() {
+export default function RecipeCardContent({ navigation }) {
   return (
-    <View className="mb-6">
+    <TouchableOpacity
+      className="mb-6"
+      onPress={() => navigation.navigate("RecipeCardDetails")}
+    >
       <View>
         <Image
           className="w-full h-[300px] object-cover rounded-md"
@@ -18,6 +21,6 @@ export default function RecipeCardContent() {
           similique quaerat.
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }

@@ -3,12 +3,12 @@ import React from "react";
 import Section from "../shared/Section";
 import RecipeCard from "./recipeCard/RecipeCard";
 
-export default function RecipeList() {
+export default function RecipeList({ navigation }) {
   return (
     <Section>
       <View>
-        <RecipeCard />
-        <RecipeCard />
+        <RecipeCard navigation={navigation} />
+        <RecipeCard navigation={navigation} />
       </View>
     </Section>
   );

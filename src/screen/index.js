@@ -7,6 +7,7 @@ import ProfileScreen from "./ProfileScreen";
 import AddDetailsScreen from "./AddDetailsScreen";
 import AddPhotoScreen from "./AddPhotoScreen";
 import AddResultScreen from "./AddResultScreen";
+import RecipeCardDetailsScreen from "./RecipeCardDetailsScreen";
 
 export {
   SplashScreen,
@@ -18,4 +19,5 @@ export {
   AddDetailsScreen,
   AddPhotoScreen,
   AddResultScreen,
+  RecipeCardDetailsScreen,
 };

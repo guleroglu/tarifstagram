@@ -9,7 +9,7 @@ export default function HomeScreen({ navigation }) {
     <SafeAreaView className="bg-white flex-1">
       <ScrollView showsVerticalScrollIndicator={false}>
         <Header navigation={navigation} />
-        <RecipeList />
+        <RecipeList navigation={navigation} />
       </ScrollView>
     </SafeAreaView>
   );
