@@ -6,8 +6,6 @@ import {
   AntDesign,
   Feather,
   FontAwesome6,
-  MaterialIcons,
-  FontAwesome,
   Octicons,
 } from "@expo/vector-icons";
 import AddRecipeStack from "./AddRecipeStack";
@@ -38,8 +36,8 @@ export default function UserStack() {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <View className="items-center ">
-                  <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <Octicons name="home" size={24} color="#00012C" />
+                  <View className="w-[4px] h-[4px] rounded-full bg-[#032251] absolute bottom-[30px]"></View>
+                  <Octicons name="home" size={24} color="#032251" />
                 </View>
               ) : (
                 <Octicons name="home" size={24} color="#8392AE" />
@@ -54,8 +52,8 @@ export default function UserStack() {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <View className="items-center ">
-                  <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <Feather name="file-text" size={24} color="#00012C" />
+                  <View className="w-[4px] h-[4px] rounded-full bg-[#032251] absolute bottom-[30px]"></View>
+                  <Feather name="file-text" size={24} color="#032251" />
                 </View>
               ) : (
                 <Feather name="file-text" size={24} color="#8392AE" />
@@ -69,8 +67,8 @@ export default function UserStack() {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <View className="items-center ">
-                  <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <AntDesign name="pluscircleo" size={24} color="#00012C" />
+                  <View className="w-[4px] h-[4px] rounded-full bg-[#032251] absolute bottom-[30px]"></View>
+                  <AntDesign name="pluscircleo" size={24} color="#032251" />
                 </View>
               ) : (
                 <AntDesign name="pluscircleo" size={24} color="#8392AE" />
@@ -84,8 +82,8 @@ export default function UserStack() {
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <View className="items-center ">
-                  <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <FontAwesome6 name="user-circle" size={24} color="#00012C" />
+                  <View className="w-[4px] h-[4px] rounded-full bg-[#032251] absolute bottom-[30px]"></View>
+                  <FontAwesome6 name="user-circle" size={24} color="#032251" />
                 </View>
               ) : (
                 <FontAwesome6 name="user-circle" size={24} color="#8392AE" />
