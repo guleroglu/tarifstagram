@@ -2,7 +2,14 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ProfileScreen, FavoriteRecipes } from "../screen";
 import { NavigationContainer } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
+import {
+  AntDesign,
+  Feather,
+  FontAwesome6,
+  MaterialIcons,
+  FontAwesome,
+  Octicons,
+} from "@expo/vector-icons";
 import AddRecipeStack from "./AddRecipeStack";
 import HomeStack from "./HomeStack";
 import { View } from "react-native";
@@ -32,10 +39,10 @@ export default function UserStack() {
               focused ? (
                 <View className="items-center ">
                   <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <AntDesign name="home" size={24} color="#00012C" />
+                  <Octicons name="home" size={24} color="#00012C" />
                 </View>
               ) : (
-                <AntDesign name="home" size={24} color="#8392AE" />
+                <Octicons name="home" size={24} color="#8392AE" />
               ),
           }}
         />
@@ -48,10 +55,10 @@ export default function UserStack() {
               focused ? (
                 <View className="items-center ">
                   <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <AntDesign name="hearto" size={24} color="#00012C" />
+                  <Feather name="file-text" size={24} color="#00012C" />
                 </View>
               ) : (
-                <AntDesign name="hearto" size={24} color="#8392AE" />
+                <Feather name="file-text" size={24} color="#8392AE" />
               ),
           }}
         />
@@ -63,10 +70,10 @@ export default function UserStack() {
               focused ? (
                 <View className="items-center ">
                   <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <AntDesign name="plus" size={24} color="#00012C" />
+                  <AntDesign name="pluscircleo" size={24} color="#00012C" />
                 </View>
               ) : (
-                <AntDesign name="plus" size={24} color="#8392AE" />
+                <AntDesign name="pluscircleo" size={24} color="#8392AE" />
               ),
           }}
         />
@@ -78,10 +85,10 @@ export default function UserStack() {
               focused ? (
                 <View className="items-center ">
                   <View className="w-[4px] h-[4px] rounded-full bg-primary absolute bottom-[30px]"></View>
-                  <AntDesign name="user" size={24} color="#00012C" />
+                  <FontAwesome6 name="user-circle" size={24} color="#00012C" />
                 </View>
               ) : (
-                <AntDesign name="user" size={24} color="#8392AE" />
+                <FontAwesome6 name="user-circle" size={24} color="#8392AE" />
               ),
           }}
         />
