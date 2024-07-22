@@ -10,7 +10,7 @@ export default function Header({ navigation }) {
     <View className="flex-row justify-between items-center p-[10px]">
       <View>
         <Text className="text-[20px] text-primary tracking-widest">
-          tarifstagram
+          tarifstagramm
         </Text>
       </View>
       <View className="flex-row items-center gap-2">
