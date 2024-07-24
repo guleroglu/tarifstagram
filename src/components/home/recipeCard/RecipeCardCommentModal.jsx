@@ -1,30 +1,18 @@
-import { Modal, Text, View } from "react-native";
+import { Modal, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-export default function RecipeCardCommentModal() {
+export default function RecipeCardCommentModal({
+  modalVisible,
+  setModalVisible,
+}) {
   return (
-    <View>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text style={styles.textStyle}>Hide Modal</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
-    </View>
+    <Modal animationType="slide" transparent={true} visible={modalVisible}>
+      <View className="bg-red-500 flex-1 absolute h-5/6 w-full bottom-0  rounded-md">
+        <Text>Hello world</Text>
+        <TouchableOpacity onPress={() => setModalVisible(false)}>
+          <Text>Kapat</Text>
+        </TouchableOpacity>
+      </View>
+    </Modal>
   );
 }

@@ -7,9 +7,12 @@ import {
   FontAwesome,
 } from "@expo/vector-icons";
 
+import RecipeCardCommentModal from "./RecipeCardCommentModal";
+
 export default function RecipeCardFooter() {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const handleLike = () => {
     setLiked(!liked);
@@ -18,8 +21,6 @@ export default function RecipeCardFooter() {
   const handleSaved = () => {
     setSaved(!saved);
   };
-
-  console.log(liked);
 
   return (
     <View className="flex-row justify-around items-center">
@@ -35,7 +36,10 @@ export default function RecipeCardFooter() {
 
         <Text className="text-primary text-[13px] font-semibold">33</Text>
       </TouchableOpacity>
-      <TouchableOpacity className="flex-row items-center gap-1">
+      <TouchableOpacity
+        onPress={() => setModalVisible(true)}
+        className="flex-row items-center gap-1"
+      >
         <FontAwesome5 name="comment" size={20} color="#8392AE" />
         <Text className="text-primary text-[13px] font-semibold">66</Text>
       </TouchableOpacity>
@@ -50,6 +54,12 @@ export default function RecipeCardFooter() {
         )}
         <Text className="text-primary text-[13px] font-semibold">99</Text>
       </TouchableOpacity>
+      <View className="bg-red-500">
+        <RecipeCardCommentModal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+        />
+      </View>
     </View>
   );
 }
