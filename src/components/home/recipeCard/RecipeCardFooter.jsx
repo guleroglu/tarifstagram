@@ -1,13 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
-import {
-  Feather,
-  AntDesign,
-  FontAwesome5,
-  FontAwesome,
-} from "@expo/vector-icons";
-
-import RecipeCardCommentModal from "./RecipeCardCommentModal";
+import { AntDesign, FontAwesome5, FontAwesome } from "@expo/vector-icons";
+import CustomModal from "../../shared/Modal";
+import RecipeCardComment from "./RecipeCardComment";
 
 export default function RecipeCardFooter() {
   const [liked, setLiked] = useState(false);
@@ -54,12 +49,14 @@ export default function RecipeCardFooter() {
         )}
         <Text className="text-primary text-[13px] font-semibold">99</Text>
       </TouchableOpacity>
-      <View className="bg-red-500">
-        <RecipeCardCommentModal
-          modalVisible={modalVisible}
-          setModalVisible={setModalVisible}
-        />
-      </View>
+
+      <CustomModal
+        setModalVisible={setModalVisible}
+        modalVisible={modalVisible}
+        animation={"fade"}
+      >
+        <RecipeCardComment setModalVisible={setModalVisible} />
+      </CustomModal>
     </View>
   );
 }
